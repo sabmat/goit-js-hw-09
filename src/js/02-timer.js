@@ -4,7 +4,6 @@ import 'flatpickr/dist/flatpickr.min.css';
 
 const refs = {
   startBtn: document.querySelector('[data-start]'),
-  stopBtn: document.querySelector('[data-stop]'),
   clockFace: document.querySelector('.timer'),
   dayValue: document.querySelector('[data-days]'),
   hoursValue: document.querySelector('[data-hours]'),
@@ -39,10 +38,6 @@ function timerOn(finishDate) {
   }
   refs.startBtn.addEventListener('click', () => {
     timer.start(utsFinishDate, currentTime);
-  });
-
-  refs.stopBtn.addEventListener('click', () => {
-    timer.stop();
   });
 }
 class Timer {
